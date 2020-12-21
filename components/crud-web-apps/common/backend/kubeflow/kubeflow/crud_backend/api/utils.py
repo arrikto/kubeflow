@@ -26,4 +26,5 @@ def failed_response(msg, error_code):
 
 
 def events_field_selector(kind, name):
-    return f"involvedObject.kind={kind},involvedObject.name={name}"
+    selector = "involvedObject.kind=%s,involvedObject.name=%s" % (kind, name)
+    return selector
